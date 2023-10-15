@@ -18,7 +18,6 @@ const Problem1 = () => {
     setStatus("");
   };
 
-  // Define a status order
   const statusOrder = ["Active", "Completed", "Pending", "Archive"];
 
   return (
@@ -95,7 +94,7 @@ const Problem1 = () => {
             <tbody>
               {show === "all" &&
                 items
-                  .slice() // Create a copy to avoid mutating the original array
+                  .slice()
                   .sort(
                     (a, b) =>
                       statusOrder.indexOf(a.status) -
